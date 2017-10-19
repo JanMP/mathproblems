@@ -40,7 +40,10 @@ exports.strichrechnungGenerator = generator =
     if b > a then [a, b] = [b, a]
     #return
     problem : "#{a}-#{b}"
-    description : "Subtrahiere die zwei Ganzen Zahlen:"
+    description :
+      switch language
+        when "de" then "Subtrahiere die zwei Ganzen Zahlen:"
+        else "Subtract the two integers:"
     checks : checksPositive
   strichGanzzahlig : (level = 1, language="de") ->
     [a, b] = getNumbers level
@@ -49,14 +52,19 @@ exports.strichrechnungGenerator = generator =
     #return
     problem : problem
     problemTeX : problem
-    description : "Berechne:"
+    description :
+      switch language
+        when "de" then "Berechne:"
+        else "Calculate:"
     checks : checks
 
 exports.strichrechnungGanzzahlig =
   title :
     de : "Strichrechnung mit Natürlichen Zahlen"
+    en : "Sums adn Differences of Natural Numbers"
   description :
     de : "Plus und Minus ohne Komma"
+    en : "Plus and Minus, but no Commas yet"
   problems : [
     levels : [1..7]
     generator : generator.additionNatural
@@ -69,8 +77,10 @@ exports.strichrechnungGanzzahlig =
 exports.strichrechnungRational =
   title :
     de : "Strichrechung mit Rationalen Zahlen"
+    en : "Sums and Numbers of Rational Numbers"
   description :
     de : "Plus und Minus mit (möglicherweise) negativem Ergebnis"
+    en : "+++"
   problems : [
     levels : [1..6]
     generator : generator.strichGanzzahlig

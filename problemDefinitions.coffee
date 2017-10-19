@@ -95,11 +95,14 @@ exports.moduleKeys = [
 exports.modules = [
   title :
     de : "Aufgaben nach Themen"
+    en : "Problems by topic"
   kindred : [
     title :
       de : "Grundrechenarten"
+      en : "Basics"
     description :
       de : "Die Grundlagen, die einfach sitzen müssen."
+      en : "The foundations that got to be solid"
     kindred : [
       "strichrechnungGanzzahlig"
       "strichrechnungRational"
@@ -113,8 +116,10 @@ exports.modules = [
   ,
     title :
       de : "Bruchrechnen"
+      en : "Fractions"
     description :
       de : "Bruchrechnen ist euer Freund!"
+      en : "Fractions are your friends!"
     kindred : [
       "bruch0"
       "bruch1"
@@ -125,8 +130,10 @@ exports.modules = [
   ,
     title :
       de : "Rechnen mit Einheiten"
+      en : "Calculating with units"
     description :
       de : "Einheiten weglassen rächt sich."
+      en : "Always use units if you can."
     kindred : [
       "lengthUnits"
       "areaUnits"
@@ -136,8 +143,10 @@ exports.modules = [
   ,
     title :
       de : "Potenzrechnung"
+      en : "Exponents"
     description :
       de : "Rechengesetze für Potenzen und Wurzeln."
+      en : "Rules for Exponents and Roots."
     kindred : [
       "potenz1"
       "potenz2"
