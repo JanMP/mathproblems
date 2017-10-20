@@ -57,6 +57,9 @@ exports.Check =
       de :
         "Die linke Seite der Gleichung deiner Lösung muss mit der linken \
         Seite der Gleichung der Musterlösung exakt übereinstimmen."
+      en :
+        "The equation's left side  of your answer must exactly match the \
+        equation's left side of the solution."
 
   leftSideOptionalExactFit :
     pass :
@@ -69,6 +72,9 @@ exports.Check =
       de :
         "Wenn du deine Lösung als Gleichung schreibst, \
         muss die linke Seite mit der Lösung übereinstimmen."
+      en :
+        "If you give an equation for an answer, it's left side must \
+        exactly match the solution."
 
   exactFit :
     pass : (answer, solution) -> answer is solution
@@ -77,6 +83,8 @@ exports.Check =
       de :
         "Das Ergebnis muss bei dieser Aufgabe \
         exakt mit der Lösung übereinstimmen."
+      en :
+        "For this problem the answer must exactly match the solution."
 
   equivalent :
     pass : (answer, solution) ->
@@ -88,7 +96,7 @@ exports.Check =
       en : "Your answer and the solution are equivalent."
     failText :
       de : "Das Ergebnis ist nicht zur Lösung äquivalent."
-      en : "Your answer and teh solution are not equivalent"
+      en : "Your answer and the solution are not equivalent."
 
   noReducableFractionsOptional :
     pass : noReducableFractions
@@ -96,13 +104,15 @@ exports.Check =
     passText : undefined
     failText :
       de : "Da kann man noch was kürzen."
+      en : "There's a fraction that still could be reduced."
 
   noReducableFractionsRequired :
     pass : noReducableFractions
     required : true
     passText : undefined
     failText :
-      de : "Der Bruch wurde nicht vollständig gekürzt."
+      de : "Ein Bruch wurde nicht vollständig gekürzt."
+      en : "You have to reduce all the fractions."
 
   summandsEquivalent :
     pass : (answer, solution) ->
@@ -179,7 +189,8 @@ exports.Check =
       de :
         "Das Ergebnis muss eine einzelne Potenz oder eine einzelne Zahl sein."
       en :
-        "The result may only consist of a single +++"
+        "The result may only consist of a single exponentiation or a single number"
+
   firstFactorEquivalent :
     pass : (answer, solution) ->
       getFirstFactor = (str) ->
@@ -223,11 +234,11 @@ exports.Check =
       ///.test answer
     required : true
     passText :
-      de : "Die Form des Ergebnisses entspricht der Scheitelpunktform"
-      en : "+++"
+      de : "Die Form des Ergebnisses entspricht der Scheitelpunktform."
+      en : "Your Answer fits the vertex form of a quadratic equation."
     failText :
-      de : "Das Ergebnis hat nicht die korrekte Scheitelpunktform"
-      en : "+++"
+      de : "Das Ergebnis hat nicht die korrekte Scheitelpunktform."
+      en : "Your Answer does not fit the vertex form of a quadratic equation."
 
   roundedValue : (decimals) ->
     pass : (answer, solution) ->
@@ -236,8 +247,8 @@ exports.Check =
       isRounded Number(answer), Number(solution), minPrecision
     required : true
     failText :
-      de : "Das Ergebnis entspricht nicht der Lösung"
-      en : ""
+      de : "Das Ergebnis entspricht nicht der Lösung."
+      en : "Your Answer doesn't match the Solution."
 
   roundedValueWithUnit : (decimals, unit) ->
     pass : (answer, solution) ->
@@ -261,7 +272,7 @@ exports.Check =
     required : true
     failText :
       de : "Das Ergebnis entspricht nicht der Lösung."
-      en : "+++"
+      en : "Your answer doesn't match the solution."
 
 
   equivalentWithUnit :
@@ -304,8 +315,9 @@ exports.Check =
         true
     required : true
     failText :
-      de : "Die geforderte Einheit #{unit} wurde nicht benutzt."
-      en : "You did not use the unit #{unit}"
+      de : "Die geforderte Einheit '#{unit}' wurde nicht benutzt."
+      en : "You did not use the required unit '#{unit}'"
+
   answerEndsWith : (str) ->
     pass : (answer, solution) ->
       ///
@@ -322,4 +334,6 @@ exports.Check =
     required : true
     failText :
       de : "Das Ergebnis enthält die Potenz eines Klammertermes."
-      en : "+++"
+      en :
+        "The base of the exponentiation may not be an expression \
+        enclosed in brackets."

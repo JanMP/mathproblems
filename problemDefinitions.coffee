@@ -143,10 +143,10 @@ exports.modules = [
   ,
     title :
       de : "Potenzrechnung"
-      en : "Exponents"
+      en : "Exponentiations"
     description :
       de : "Rechengesetze für Potenzen und Wurzeln."
-      en : "Rules for Exponents and Roots."
+      en : "Rules for Exponentiations and Roots."
     kindred : [
       "potenz1"
       "potenz2"
@@ -154,8 +154,10 @@ exports.modules = [
   ,
     title :
       de : "Terme umformen"
+      en : "Simplifying expressions"
     description :
       de : "Terme zusammenfassen, Umgang mit Klammern"
+      en : "This is mostly about dealing with brackets."
     kindred : [
       "terme1"
       "ausklammern"
@@ -165,8 +167,10 @@ exports.modules = [
   ,
     title :
       de : "Gleichungen"
+      en : "Equations"
     description :
       de : "Lineare und Quadratische Gleichungen Lösen"
+      en : "Solving linear and quadratic equations."
     kindred : [
       "lineareGleichung1"
       "lineareGleichung2"
@@ -176,8 +180,10 @@ exports.modules = [
   ,
     title :
       de : "Funktionen"
+      en : "Functions"
     description :
       de : "Funktionen, Graphen, Funktionsgleichungen"
+      en : "Function plots and function expressions"
     kindred : [
       "linearFunctions"
       "scheitelpunkt"
@@ -187,8 +193,10 @@ exports.modules = [
   ,
     title :
       de : "Geometrie"
+      en : "Geometry"
     description :
       de : "Vermischte Aufgaben"
+      en : "Assorted problems"
     kindred : [
       "strahlensatz"
       "prismen"
@@ -196,8 +204,10 @@ exports.modules = [
   ,
     title :
       de : "Calculus"
+      en : "Calculus"
     description :
       de : "Differential/Integralrechnung"
+      en : "Differentiation and Integration"
     kindred :[
       "differentiation"
       "integration"
@@ -205,9 +215,11 @@ exports.modules = [
   ,
     title :
       de : "Area 51"
+      en : "Area 51"
     description :
       de : "Testgebiet für Aufgabengeneratoren \
       an denen ich noch arbeite. Benutzung auf eigene Gefahr."
+      en : "Be carefull, there's fnords in there (and half way tested stuff)."
     kindred : [
       # "templateTest"
       "sinussatz"

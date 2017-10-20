@@ -30,8 +30,13 @@ exports.nullStellenGenerator = nullStellenGenerator =
     problemTeX : problemTeX
     solution : solution
     solutionTeX : "\\mathbb{L}=\\left\\{#{solution}\\right\\}"
-    description : "Finde die Nullstellen:"
-    hint : if level < 2 then "Verwende die pq-Formel" else null
+    description : switch language
+      when "de" then "Finde die Nullstellen:"
+      else "Find the roots:"
+    hint : switch langue
+      when "de" then
+        if level < 2 then "Verwende die pq-Formel" else undefined
+      else "+++"
 
   substitution : (level = 1, language="de") ->
     [a, b, c] = rnd.intsPlus(9)
@@ -52,8 +57,13 @@ exports.nullStellenGenerator = nullStellenGenerator =
     problemTeX : problemTeX
     solution : solution
     solutionTeX : "\\mathbb{L}=\\left\\{#{solution}\\right\\}"
-    description : "Finde die Nullstellen:"
-    hint : if level < 2 then "Substitution hilft." else null
+    description : switch language
+      when "de" then "Finde die Nullstellen:"
+      else "Find the roots:"
+    hint : switch language
+      when "de"
+        if level < 2 then "Substitution hilft." else undefined
+      else "+++"
 
   factorized : (level = 1, language="de") ->
     [a, b, c, d, e] = rnd.intsPlus(9)
@@ -78,14 +88,21 @@ exports.nullStellenGenerator = nullStellenGenerator =
     problemTeX : problemTeX
     solution : solution
     solutionTeX : "\\mathbb{L}=\\left\\{#{solution}\\right\\}"
-    description : "Finde die Nullstellen:"
-    hint : if level < 2 then "Substitution hilft." else null
+    description : switch language
+      when "de" then "Finde die Nullstellen:"
+      else "Find the roots:"
+    hint : switch language
+      when "de"
+        if level < 2 then "Substitution hilft." else undefined
+      else "+++"
 
 exports.nullstellen =
   title :
     de : "Nullstellen Ganzrationaler Funktionen"
+    en : "+++"
   description :
     de : "pq-Formel, Substitution und teilweise factorisierte Polynome."
+    "+++"
   problems : [
     levels : [1..4]
     generator : nullStellenGenerator.pq

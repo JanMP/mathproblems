@@ -46,8 +46,10 @@ exports.polynomialDivisionGenerator = polynomialDivisionGenerator =
 exports.polynomialDivision =
   title :
     de : "Polynomdivision"
+    en : "Dividing Polynomials"
   description :
     de : "Nicht so schlimm, wie es zunächst aussieht."
+    en : "Not as bad as it looks."
   problems : [
     levels : [1..5]
     generator : polynomialDivisionGenerator.division

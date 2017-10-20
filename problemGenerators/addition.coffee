@@ -33,8 +33,11 @@ exports.strichrechnungGenerator = generator =
     [a,b] = getNumbers level
     #return
     problem : "#{a}+#{b}"
-    description : "Addiere die zwei Ganzen Zahlen:"
+    description : switch language
+      when "de" then "Addiere die zwei Natürlichen Zahlen:"
+      else "Add the two natural numbers:"
     checks : checksPositive
+
   subtraktionNatural : (level = 1, language="de") ->
     [a,b] = getNumbers level
     if b > a then [a, b] = [b, a]
@@ -42,9 +45,10 @@ exports.strichrechnungGenerator = generator =
     problem : "#{a}-#{b}"
     description :
       switch language
-        when "de" then "Subtrahiere die zwei Ganzen Zahlen:"
-        else "Subtract the two integers:"
+        when "de" then "Subtrahiere die zwei Natürlichen Zahlen:"
+        else "Subtract the two natural numbers:"
     checks : checksPositive
+
   strichGanzzahlig : (level = 1, language="de") ->
     [a, b] = getNumbers level
     [op1, op2, op3] = rnd.opsStrich()
@@ -61,10 +65,10 @@ exports.strichrechnungGenerator = generator =
 exports.strichrechnungGanzzahlig =
   title :
     de : "Strichrechnung mit Natürlichen Zahlen"
-    en : "Sums adn Differences of Natural Numbers"
+    en : "Sums and Differences of Natural Numbers"
   description :
     de : "Plus und Minus ohne Komma"
-    en : "Plus and Minus, but no Commas yet"
+    en : "Plus and Minus, but no decimal point (yet)"
   problems : [
     levels : [1..7]
     generator : generator.additionNatural
@@ -76,11 +80,11 @@ exports.strichrechnungGanzzahlig =
 
 exports.strichrechnungRational =
   title :
-    de : "Strichrechung mit Rationalen Zahlen"
-    en : "Sums and Numbers of Rational Numbers"
+    de : "Strichrechung mit Ganzen Zahlen"
+    en : "Sums and Differences of Integers"
   description :
     de : "Plus und Minus mit (möglicherweise) negativem Ergebnis"
-    en : "+++"
+    en : "Plus and Minus with (possibly) Negative Results"
   problems : [
     levels : [1..6]
     generator : generator.strichGanzzahlig
