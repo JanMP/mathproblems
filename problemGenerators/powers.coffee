@@ -33,7 +33,7 @@ exports.powersGenerator = powersGenerator =
     x = rnd.letter()
     #return
     problem : "#{x}^(#{op2}#{n})#{op1}#{x}^(#{op3}#{m})"
-    description : swich language
+    description : switch language
       when "de" then "Vereinfache den Term:"
       else "Simplify the expression"
     checks : defaultPowerCheck
@@ -59,7 +59,7 @@ exports.powersGenerator = powersGenerator =
         [n, m] = rnd.ints()
     #return
     problem : "#{x}^(#{op2}#{n}#{nx})#{op1}#{x}^(#{op3}#{m}#{mx})"
-    description : swich language
+    description : switch language
       when "de" then "Vereinfache den Term:"
       else "Simplify the expression"
     checks : defaultPowerCheck
@@ -75,7 +75,7 @@ exports.powersGenerator = powersGenerator =
     x = rnd.letter()
     #return
     problem : "#{x}^(1/#{nd})#{op}#{x}^(1/#{md})"
-    description : swich language
+    description : switch language
       when "de" then "Vereinfache den Term:"
       else "Simplify the expression"
     checks : defaultPowerCheck
@@ -142,7 +142,7 @@ exports.powersGenerator = powersGenerator =
     #return
     problem : problem
     solution : solution
-    description : swich language
+    description : switch language
       when "de" then "Vereinfache den Term:"
       else "Simplify the expression"
     hint : switch language

@@ -34,7 +34,7 @@ exports.nullStellenGenerator = nullStellenGenerator =
       when "de" then "Finde die Nullstellen:"
       else "Find the roots:"
     hint : switch langue
-      when "de" then
+      when "de"
         if level < 2 then "Verwende die pq-Formel" else undefined
       else "+++"
 
@@ -102,7 +102,7 @@ exports.nullstellen =
     en : "+++"
   description :
     de : "pq-Formel, Substitution und teilweise factorisierte Polynome."
-    "+++"
+    en : "+++"
   problems : [
     levels : [1..4]
     generator : nullStellenGenerator.pq
