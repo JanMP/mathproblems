@@ -33,7 +33,7 @@ exports.nullStellenGenerator = nullStellenGenerator =
     description : switch language
       when "de" then "Finde die Nullstellen:"
       else "Find the roots:"
-    hint : switch langue
+    hint : switch language
       when "de"
         if level < 2 then "Verwende die pq-Formel" else undefined
       else "+++"
