@@ -189,7 +189,8 @@ exports.Check =
       de :
         "Das Ergebnis muss eine einzelne Potenz oder eine einzelne Zahl sein."
       en :
-        "The result may only consist of a single exponentiation or a single number"
+        "The result may only consist of a single exponentiation or a \
+        single number"
 
   firstFactorEquivalent :
     pass : (answer, solution) ->
@@ -220,7 +221,7 @@ exports.Check =
       de :
         "Der auszuklammernde Faktor steht nicht vor der Klammer"
       en :
-        "+++"
+        "The number to be factored out is not found before the bracket."
   scheitelpunktForm :
     pass : (answer, solution) ->
       ///

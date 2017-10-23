@@ -63,7 +63,7 @@ exports.fractionGenerator = fractionGenerator =
     solution : "#{a*c}/#{b*c}"
     description : switch language
       when "de" then "Erweitere den Bruch mit der Zahl #{c}."
-      else "+++"
+      else "Expand the Fraction by #{c}."
   erweitern2 : (level = 1, language="de") ->
     switch level
       when 1
@@ -256,7 +256,9 @@ exports.fractionGenerator = fractionGenerator =
           "Du kannst auf jeden Fall mindestens einmal überkreuz \
           kürzen ehe Du die Brüche multiplizierst. Überkreuz kürzen \
           geht nur bei Mal. Nicht bei Plus oder Minus!"
-        else "+++"
+        else "You can reduce the Fractions crosswise at least once. \
+          You can only reduce crosswise with products of fractions. \
+          This does NOT work for sums or differences!"
 
   zusammenGesetzt : (level = 1, language="de") ->
     head = rnd.bool()
@@ -428,7 +430,7 @@ exports.fractions =
       en : "Fractions 0"
     description :
       de : "Kürzen und Erweitern von Brüchen"
-      en : "Reducing and +++ Fractions"
+      en : "Reducing and expanding Fractions"
     problems : [
       levels : [1..4]
       generator : fractionGenerator.kuerzen

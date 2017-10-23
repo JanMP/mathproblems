@@ -41,7 +41,9 @@ exports.polynomialDivisionGenerator = polynomialDivisionGenerator =
     problemTeX : "\\frac{#{numeratorTeX}}{#{denominatorTeX}}"
     solution : solution
     solutionTeX : nerdamer(solution).toTeX()
-    description : "Dividiere die Polynome:"
+    description : switch language
+      when "de" then "Kürze den Bruch:"
+      else "Reduce the Fraction:"
 
 exports.polynomialDivision =
   title :

@@ -63,7 +63,6 @@ exports.powersGenerator = powersGenerator =
       when "de" then "Vereinfache den Term:"
       else "Simplify the expression"
     checks : defaultPowerCheck
-    hint : "'a hoch 3b' gibst du so ein: a^(3b)"
 
   exp1NumQuotient : (level = 1, language="de") -> #exp1NumQuotient
     switch level
@@ -79,7 +78,6 @@ exports.powersGenerator = powersGenerator =
       when "de" then "Vereinfache den Term:"
       else "Simplify the expression"
     checks : defaultPowerCheck
-    hint : "'a hoch 3b' gibst du so ein: a^(3b)"
 
   sqrtAsPower : (level = 1, language="de") ->
     x = rnd.letter()
@@ -114,10 +112,9 @@ exports.powersGenerator = powersGenerator =
       else "\\frac{\\sqrt#{magStrN}{#{x}}}{\\sqrt#{magStrM}{#{x}}}"
     description : switch language
       when "de"
-        "Wende das 1. Potenzgesetz an und \
-        schreibe das Ergebnis als Potenz:"
+        "Wandle in eine einzelne Potenz um."
       else
-        "+++"
+        "Transform the expression into a single potentiation."
 
   exp2Num : (level = 1, language="de") ->
     exp = rnd.int2Plus 5
@@ -161,7 +158,7 @@ exports.powers =
       en : "Exponentiations and Roots 1"
     description :
       de : "Aufgaben zum 1. Potenzgesetz (gleiche Basis)."
-      en : "Same Base"
+      en : "Sums and Differences of Exponentiations with the same Base."
     problems : [
       levels : [1..3]
       generator : powersGenerator.exp1Num
@@ -186,7 +183,7 @@ exports.powers =
       en : "Exponentiations and Roots 2"
     description :
       de : "Aufgaben zum 2. Potenzgesetz (gleicher Exponent)."
-      en : "Same Exponent"
+      en : "Multiplying and Dividing Exponentiations with the same Exponent."
     problems : [
       levels : [1..2]
       generator : powersGenerator.exp2Num

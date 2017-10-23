@@ -107,7 +107,7 @@ exports.expressionGenerator = expressionGenerator =
     solution : solution
     description : switch language
       when "de" then "Klammere #{a} aus."
-      else "+++"
+      else "Factor out #{a}."
     checks : [
         Check.equivalent
         Check.firstFactorEquivalent
@@ -128,7 +128,7 @@ exports.expressionGenerator = expressionGenerator =
     solution : solution
     description : switch language
       when "de" then "Klammere so weit wie möglich aus."
-      else "+++"
+      else "Factor out as much as possible."
     checks : [
         Check.equivalent
         Check.firstFactorEquivalent
@@ -140,7 +140,7 @@ exports.expressions =
     en : "Simplify expressions"
   description :
     de : "Terme zusammenfassen und Klammern ausmultiplizieren"
-    en : "+++"
+    en : "Simplifying Expressions and Expanding Brackets "
   problems : [
     levels : [1..3]
     generator : expressionGenerator.summeZusFass
@@ -164,7 +164,7 @@ exports.ausklammern =
     en : "Factoring Sums"
   description :
     de : "Oder einfacher ausgedrückt: Ausklammern"
-    en : "+++"
+    en : "Turning Sums into Products with the Distributive Rule"
   problems : [
     levels : [1..2]
     generator : expressionGenerator.ausklammern

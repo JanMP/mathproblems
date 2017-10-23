@@ -33,10 +33,13 @@ exports.nullStellenGenerator = nullStellenGenerator =
     description : switch language
       when "de" then "Finde die Nullstellen:"
       else "Find the roots:"
-    hint : switch language
-      when "de"
-        if level < 2 then "Verwende die pq-Formel" else undefined
-      else "+++"
+    hint :
+      if level < 2
+        switch language
+          when "de"
+            "Verwende die pq-Formel"
+          else
+            "Use the Quadratic Formula."
 
   substitution : (level = 1, language="de") ->
     [a, b, c] = rnd.intsPlus(9)
@@ -60,10 +63,6 @@ exports.nullStellenGenerator = nullStellenGenerator =
     description : switch language
       when "de" then "Finde die Nullstellen:"
       else "Find the roots:"
-    hint : switch language
-      when "de"
-        if level < 2 then "Substitution hilft." else undefined
-      else "+++"
 
   factorized : (level = 1, language="de") ->
     [a, b, c, d, e] = rnd.intsPlus(9)
@@ -91,18 +90,14 @@ exports.nullStellenGenerator = nullStellenGenerator =
     description : switch language
       when "de" then "Finde die Nullstellen:"
       else "Find the roots:"
-    hint : switch language
-      when "de"
-        if level < 2 then "Substitution hilft." else undefined
-      else "+++"
 
 exports.nullstellen =
   title :
     de : "Nullstellen Ganzrationaler Funktionen"
-    en : "+++"
+    en : "Roots of Polynomial Functions"
   description :
     de : "pq-Formel, Substitution und teilweise factorisierte Polynome."
-    en : "+++"
+    en : "Quadratic Formula, Substitution, Partially Factored Polynomials"
   problems : [
     levels : [1..4]
     generator : nullStellenGenerator.pq
