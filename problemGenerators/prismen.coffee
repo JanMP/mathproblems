@@ -10,6 +10,8 @@ math = require "mathjs"
 
 { teXifyAM } = require "../renderAM.coffee"
 
+#TODO: Fix exception thrown by mathjs, bickering about not being able to implicitly convert to bignumber
+
 exports.prismenGenerator = generator =
   cylinderVolume : (level = 1, language="de") ->
     unit = rnd.lengthUnit()

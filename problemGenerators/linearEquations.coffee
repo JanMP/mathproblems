@@ -26,7 +26,7 @@ exports.linearEquationGenerator = linearEquationGenerator =
     problem : problem
     solution : "#{x}=" + nerdamer.solveEquations(problem, x).toString()
     description : switch language
-      when de then "Löse die Gleichung für #{x}:"
+      when "de" then "Löse die Gleichung für #{x}:"
       else "Solve the equation for #{x}:"
 
   linGl2 : (level = 1, language="de") ->
@@ -44,7 +44,7 @@ exports.linearEquationGenerator = linearEquationGenerator =
     problem : problem
     solution : "#{x}=" + nerdamer.solveEquations(problem, x).toString()
     description : switch language
-      when de then "Löse die Gleichung für #{x}:"
+      when "de" then "Löse die Gleichung für #{x}:"
       else "Solve the equation for #{x}:"
 
   linGl3 : (level = 1, language="de") ->
@@ -66,7 +66,7 @@ exports.linearEquationGenerator = linearEquationGenerator =
     problem : problem
     solution : "#{x}=" + nerdamer.solveEquations(problem, x).toString()
     description : switch language
-      when de then "Löse die Gleichung für #{x}:"
+      when "de" then "Löse die Gleichung für #{x}:"
       else "Solve the equation for #{x}:"
 
   linGl4 : (level = 1, language="de") ->
@@ -88,7 +88,7 @@ exports.linearEquationGenerator = linearEquationGenerator =
     problem : problem
     solution : "#{x}=" + nerdamer.solveEquations(problem, x).toString()
     description : switch language
-      when de then "Löse die Gleichung für #{x}:"
+      when "de" then "Löse die Gleichung für #{x}:"
       else "Solve the equation for #{x}:"
 
   linGl5 : (level = 1, language="de") ->
@@ -111,7 +111,7 @@ exports.linearEquationGenerator = linearEquationGenerator =
     problemTeX :"#{op1}#{a}(#{x}#{op2}#{b})=#{op3}#{c}(#{x}#{op4}#{d})"
     solution : "#{x}=" + nerdamer.solveEquations(problem, x).toString()
     description : switch language
-      when de then "Löse die Gleichung für #{x}:"
+      when "de" then "Löse die Gleichung für #{x}:"
       else "Solve the equation for #{x}:"
 
   linGl6 : (level = 1, language="de") ->
@@ -131,7 +131,7 @@ exports.linearEquationGenerator = linearEquationGenerator =
     problemTeX : problem #keep brackets
     solution : "#{x}=" + nerdamer.solveEquations(problem, x).toString()
     description : switch language
-      when de then "Löse die Gleichung für #{x}:"
+      when "de" then "Löse die Gleichung für #{x}:"
       else "Solve the equation for #{x}:"
 
   linGl7 : (level = 1, language="de") ->
@@ -161,7 +161,7 @@ exports.linearEquationGenerator = linearEquationGenerator =
     problemTeX : "#{leftSideTeX}=#{rightSideTeX}"
     solution : "#{x}=" + nerdamer.solveEquations(problem, x).toString()
     description : switch language
-      when de then "Löse die Gleichung für #{x}:"
+      when "de" then "Löse die Gleichung für #{x}:"
       else "Solve the equation for #{x}:"
 
   linGl8 : (level = 1, language="de") ->
@@ -197,7 +197,7 @@ exports.linearEquationGenerator = linearEquationGenerator =
     problem : problem
     solution : "#{x}=" + nerdamer.solveEquations(polyProblem, x).toString()
     description : switch language
-      when de then "Löse die Gleichung für #{x}:"
+      when "de" then "Löse die Gleichung für #{x}:"
       else "Solve the equation for #{x}:"
 
   linGl9 : (level = 1, language="de") ->
@@ -245,7 +245,7 @@ exports.linearEquationGenerator = linearEquationGenerator =
     problem : problem
     solution : "#{x}=" + nerdamer.solveEquations(polyProblem, x).toString()
     description : switch language
-      when de then "Löse die Gleichung für #{x}:"
+      when "de" then "Löse die Gleichung für #{x}:"
       else "Solve the equation for #{x}:"
 
 exports.linearEquations =
