@@ -8,7 +8,7 @@ require "/imports/modules/nerdamer/Solve.js"
 
 math = require "mathjs"
 
-#TODO: Actually make problem that asks for the vertex
+#PLANNING:10 Actually make problem that asks for the vertex
 
 exports.scheitelpunktGenerator = generator =
   form : (level = 1, language="de") ->
