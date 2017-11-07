@@ -14,8 +14,8 @@ if Meteor.isClient
   {problemDefinitions} = require "./problemDefinitions.coffee"
 
   passes = 10
-
-  # TODO: reorganise tests to get a shorter display of results
+  # DOING: Test submodule 1 id:32
+  # TODO: reorganise tests to get a shorter display of results id:28
   for moduleKey, module of problemDefinitions
     for problem, index in module.problems
       levelOffset = problem.levelOffset ? 0
