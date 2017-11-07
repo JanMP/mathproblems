@@ -14,8 +14,14 @@ if Meteor.isClient
   {problemDefinitions} = require "./problemDefinitions.coffee"
 
   passes = 10
-  # DOING: Test submodule 1 id:32
+<<<<<<< HEAD
+  # DOING: edit in MC-OnsenUI id:37
   # TODO: reorganise tests to get a shorter display of results id:28
+=======
+
+  # DOING: edit in MC-OnsenUI id:37
+  # TODO: reorganise tests to get a shorter display of results id:38
+>>>>>>> cfcd546291b7a96b7a657b895064ff4306eb5c4e
   for moduleKey, module of problemDefinitions
     for problem, index in module.problems
       levelOffset = problem.levelOffset ? 0
