@@ -15,6 +15,7 @@ if Meteor.isClient
 
   passes = 10
 
+  # TODO: reorganise tests to get a shorter display of results
   for moduleKey, module of problemDefinitions
     for problem, index in module.problems
       levelOffset = problem.levelOffset ? 0
