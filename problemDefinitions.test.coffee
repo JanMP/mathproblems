@@ -16,6 +16,7 @@ if Meteor.isClient
   passes = 10
 
   # DOING: edit in in MC-OnsenUI again id:37
+  # DOING: Add a line in MatheCoach
   # TODO: reorganise tests to get a shorter display of results id:28
 
   for moduleKey, module of problemDefinitions
