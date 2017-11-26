@@ -51,7 +51,7 @@ class AMString
     this
 
   removeCDots : ->
-    re = /(\d\s?)\\cdot(\s?\D)/ig
+    re = /(\d\s?)\\cdot(\s?\D(?!frac))/ig
     doRecursion = (str) ->
       result = str.replace re, "$1~$2"
       if result is str then result else doRecursion result
