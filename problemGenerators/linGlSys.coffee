@@ -22,31 +22,24 @@ generators =
     solutionNames = rnd.uniqueLetters()[1..dimension]
     coeffs = coeffMatrix dimension
     rightSides = math.multiply(coeffs,solutions)
-    equations = (
+    problem = (
       for rightSide, i in rightSides._data
         leftSide = ""
         for solutionName, j in solutionNames
           coeff = coeffs._data[i][j]
           leftSide += " + #{coeff} #{solutionName}"
-        nerdamer("#{leftSide} = #{rightSide}").toTeX()
-    )
-    problemTeX =
-      equations.join("\\\\")
+        nerdamer("#{leftSide} = #{rightSide}")
+    ).join ","
     solutionArray =
       solutionNames.map (name, i) -> "#{name} = #{solutions[i]}"
     solution = solutionArray.join(", ")
-    solutionTeX =
-      solutionArray.map (e) -> nerdamer(e).toTeX()
-      .join("\\\\")
     chars = solutionNames.sort().join(", ").split("")
     if lastCommaPosition = chars.lastIndexOf ","
       chars[lastCommaPosition] = " und"
     variableNamesString = chars.join ""
     #return
-    problem : "not used"
-    problemTeX : problemTeX
+    problem : problem
     solution : solution
-    solutionTeX : solutionTeX
     description : "Löse das Lineare Gleichungssystem. Bestimme die Variablen \
       #{variableNamesString}."
     checks : [

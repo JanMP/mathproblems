@@ -103,7 +103,7 @@ class Problem
       wrongNumberOfResultsText = switch @language
         when "de" then "Die Anzahl der Lösungen stimmt nicht."
         else "The number of solutions is wrong."
-      failTextsRequired = []
+      failTextsRequired = [wrongNumberOfResultsText]
     else
       for solution, i in solutions
         for check in @checks

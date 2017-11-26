@@ -1,5 +1,12 @@
 math = require "mathjs"
 
+exports.alignEquations = alignEquations = (equationsTeXArray) ->
+  """
+    \\begin{aligned}
+    #{equationsTeXArray.join('\\\\').replace /=/g, '&='}
+    \\end{aligned}
+  """
+
 #use mathjs to get rid of redundant parentheses
 exports.teXifyAM = teXifyAM = (str = "") ->
   unless "," in str.split ""
@@ -11,4 +18,4 @@ exports.teXifyAM = teXifyAM = (str = "") ->
     else
       (teXifyAM part for part in str.split "=").join "="
   else
-    (teXifyAM part for part in str.split ",").join ","
+    alignEquations (teXifyAM part for part in str.split ",")
