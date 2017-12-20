@@ -19,8 +19,14 @@ exports.einXeinsGenerator = einXeinsGenerator =
         a = rnd.int2Plus 9
         b = rnd.intMin 11, 20
         if rnd.bool() then [a, b] = [b, a]
-      else
+      when 3
         [a, b] = rnd.intsMin 11, 20
+      when 4
+        a = rnd.intMin 11, 99
+        b = rnd.intMin 101, 999
+        if rnd.bool() then [a, b] = [b, a]
+      else
+        [a, b] = rnd.intsMin 101, 999
     #return
     problem : "#{a}*#{b}"
     description :
@@ -37,8 +43,10 @@ exports.einXeinsGenerator = einXeinsGenerator =
         a = rnd.int2Plus 9
         b = rnd.intMin 11, 20
         if rnd.bool() then [a, b] = [b, a]
+      when 3
+        [a, b] = rnd.intsMin 11, 99
       else
-        [a, b] = rnd.intsMin 11, 20
+        [a, b] = rnd.intsMin 101, 999
     #return
     problem : "#{a}"
     problemTeX : "#{a*b}\\div#{b}"
@@ -56,10 +64,10 @@ exports.einXeins =
     de : "Multiplikation und Division mit Ganzen Zahlen"
     en : "Multiplication and Division with Integers"
   problems : [
-    levels : [1..4]
+    levels : [1..5]
     generator : einXeinsGenerator.multiplikation
   ,
-    levels : [2..4]
+    levels : [2..5]
     levelOffset : -1
     generator : einXeinsGenerator.division
   ]

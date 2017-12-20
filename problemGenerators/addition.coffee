@@ -20,13 +20,13 @@ getNumbers = (level) ->
     when 2
       rnd.intsPlus 19
     when 3
-      rnd.intsPlus 59
+      rnd.intsMin 11, 59
     when 4
-      rnd.intsPlus 99
+      rnd.intsMin 11, 99
     when 5
-      rnd.intsPlus 999
+      rnd.intsMin 101, 999
     else
-      rnd.intsPlus 9999
+      rnd.intsMin 1001, 9999
 
 exports.strichrechnungGenerator = generator =
   additionNatural : (level = 1, language="de") ->
