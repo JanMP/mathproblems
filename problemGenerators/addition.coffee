@@ -70,11 +70,10 @@ exports.strichrechnungGanzzahlig =
     de : "Plus und Minus ohne Komma"
     en : "Plus and Minus, but no decimal point (yet)"
   problems : [
-    levels : [1..7]
+    levels : [1..6]
     generator : generator.additionNatural
   ,
-    levels : [2..7]
-    levelOffset : -1
+    levels : [1..6]
     generator : generator.subtraktionNatural
   ]
 
