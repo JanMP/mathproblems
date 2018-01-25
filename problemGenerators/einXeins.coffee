@@ -31,7 +31,7 @@ exports.einXeinsGenerator = einXeinsGenerator =
     problem : "#{a}*#{b}"
     description :
       switch language
-        when "de" then "Multipliziere die zwei Ganzen Zahlen:"
+        when "de" then "Multipliziere die zwei Natürlichen Zahlen:"
         else "Multiply the two integers:"
     checks : checks
 
@@ -52,16 +52,16 @@ exports.einXeinsGenerator = einXeinsGenerator =
     problemTeX : "#{a*b}\\div#{b}"
     description :
       switch language
-        when "de" then "Teile durch die Ganze Zahl:"
+        when "de" then "Teile durch die Zahl:"
         else "Do the division:"
     checks : checks
 
-exports.einXeins =
+exports.punktrechnung =
   title :
-    de : "1 x 1"
+    de : "Punktrechnung mit Natürlichen Zahlen"
     en : "Basics of Multiplication and Division"
   description :
-    de : "Multiplikation und Division mit Ganzen Zahlen"
+    de : "Vermischte Aufgaben zur Multiplikation und Division mit Natürlichen Zahlen"
     en : "Multiplication and Division with Integers"
   problems : [
     levels : [1..5]
@@ -69,5 +69,29 @@ exports.einXeins =
   ,
     levels : [2..5]
     levelOffset : -1
+    generator : einXeinsGenerator.division
+  ]
+
+exports.einXeins =
+  title :
+    de : "1 x 1"
+    en : "Basics of Multiplication"
+  description :
+    de : "Multiplikation mit Natürlichen Zahlen"
+    en : "Multiplication with Integers"
+  problems : [
+    levels : [1..5]
+    generator : einXeinsGenerator.multiplikation
+  ]
+
+exports.einsDurchEins =
+  title :
+    de : "1 durch 1"
+    en : "Basics of Division"
+  description :
+    de : "Division mit Natürlichen Zahlen"
+    en : "Division with Integers"
+  problems : [
+    levels : [1..4]
     generator : einXeinsGenerator.division
   ]

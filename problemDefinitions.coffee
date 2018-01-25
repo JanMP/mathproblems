@@ -15,7 +15,7 @@
   require "./problemGenerators/powers.coffee"
 { expressions, ausklammern } =
   require "./problemGenerators/expressions.coffee"
-{ einXeins } =
+{ punktrechnung, einXeins, einsDurchEins } =
   require "./problemGenerators/einXeins.coffee"
 { polynomialDivision} =
   require "./problemGenerators/polynomialDivision.coffee"
@@ -56,6 +56,8 @@ exports.moduleKeys = [
   "strichrechnungGanzzahlig"
   "strichrechnungRational"
   "einXeins"
+  "einsDurchEins"
+  "punktrechnung"
   "bruch0"
   "bruch1"
   "bruch2"
@@ -107,6 +109,8 @@ exports.modules = [
       "strichrechnungGanzzahlig"
       "strichrechnungRational"
       "einXeins"
+      "einsDurchEins"
+      "punktrechnung"
       "decimals1"
       "decimals2"
       "decimals3"
@@ -233,6 +237,8 @@ exports.problemDefinitions =
   strichrechnungGanzzahlig : strichrechnungGanzzahlig
   strichrechnungRational : strichrechnungRational
   einXeins : einXeins
+  einsDurchEins : einsDurchEins
+  punktrechnung : punktrechnung
   bruch0 : fractions.bruch0
   bruch1 : fractions.bruch1
   bruch2 : fractions.bruch2
