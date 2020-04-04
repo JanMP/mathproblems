@@ -1,6 +1,6 @@
 require "./svgTestTemplate.jade"
 { Random } = require "meteor/random"
-{ Point } = require "/imports/client/mathproblems/geometryDraw.coffee"
+{ Point } = require "/imports/mathProblems/geometryDraw.coffee"
 require "/imports/client/web/renderSVG/renderSVG.coffee"
 
 Template.svgTestTemplate.viewmodel
