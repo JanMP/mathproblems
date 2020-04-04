@@ -1,4 +1,4 @@
-Snap = require "snapsvg-cjs"
+Snap = require "snapsvg"
 
 class Point
   constructor : (arg1, arg2) ->
