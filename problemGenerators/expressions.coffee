@@ -8,6 +8,8 @@ require "/imports/modules/nerdamer/Solve.js"
 
 math = require "mathjs"
 
+import _ from 'lodash'
+
 defaultExpressionCheck = [
   Check.equivalent
   Check.summandsEquivalent

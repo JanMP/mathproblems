@@ -7,6 +7,7 @@ nerdamer = require "/imports/modules/nerdamer/nerdamer.core.js"
 require "/imports/modules/nerdamer/Solve.js"
 
 math = require "mathjs"
+import _ from 'lodash'
 
 #FIXME: Broken with KaTeX, figure out what to do with it. id:30
 generators =
